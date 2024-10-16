@@ -1,50 +1,117 @@
 <!-- 首页 -->
- <script>
-// import CryptoJS from 'crypto-js'
-// const requestObj = {
-//   APPID: '你的appid',
-//   APISecret: '你的apisecret',
-//   APIKey: '你的apikey',
-//   Uid: 'xzm', // 说明下uid自己定，唯一就行
-//   sparkResult: '', // 这里放你获取到的结果
-// }
-// // 鉴权url地址
-// const getWebsocketUrl = () => {
-//   return new Promise((resovle, reject) => {
-//     // let url = "wss://spark-api.xf-yun.com/v1.1/chat";
-//     let url = 'wss://spark-api.xf-yun.com/v2.1/chat' // 可以改成2.1的接口
-//     let host = 'spark-api.xf-yun.com' // 主机地址
-//     let apiKeyName = 'api_key' // API密钥的参数名
-//     let date = new Date().toGMTString() // 当前时间的GMT字符串表示
-//     let algorithm = 'hmac-sha256'// 使用的哈希算法
-//     let headers = 'host date request-line' // 鉴权所需的头部信息
-//     // let signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v1.1/chat HTTP/1.1`;
-//     let signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v2.1/chat HTTP/1.1` // 构建用于生成签名的原始字符串
-//     // 加密方法
-//     let signatureSha = CryptoJS.HmacSHA256(
-//       signatureOrigin,
-//       requestObj.APISecret
-//     )
-//     // 生成的加密签名
-//     let signature = CryptoJS.enc.Base64.stringify(signatureSha)
-//     // 构建鉴权头部信息
-//     let authorizationOrigin = `${apiKeyName}="${requestObj.APIKey}", algorithm="${algorithm}", headers="${headers}", signature="${signature}"`
-//     let authorization = base64.encode(authorizationOrigin)
-//     // 构建最终的 WebSocket URL
-//     url = `${url}?authorization=${authorization}&date=${encodeURI(
-//       date
-//     )}&host=${host}`
-//     resovle(url)
-//   })
-
-
+<script>
 </script>
 <template>
   <div>
-   首页
+
+    <div class="cards">
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./01.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./02.png"></div>
+      <div class="card"> <img src="./03.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./04.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./05.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./06.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card"> <img src="./07.png"></div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+      <div class="card">TEXT</div>
+    </div>
+
   </div>
 </template>
 
-<style>
+<style lang="css">
 /* 你的样式 */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-block-size: 100%;
+  display: grid;
+  place-content: center;
+  /* 设置上下内边距为 30% 视口高度 */
+  padding-block: 30dvh;
+  background: #ebeddf;
+}
+
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+    box-shadow: none;
+    transform: scale(.8) translateY(15vh);
+  }
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  /* 自动排列 */
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 30ch);
+}
+
+.card {
+  animation: slide-fade-in both;
+  /* 使用浏览器的视图时间线,允许动画根据视口的变化进行同步 */
+  animation-timeline: view();
+  /* 定义动画时间范围 */
+  animation-range: contain 0% contain 50%;
+  border-radius: 10px;
+  line-height: 6;
+  box-shadow: 0px 8px 20px #00000022;
+  font-size: 32px;
+  letter-spacing: 5px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right,
+      #92905d,
+      #75674b
+      );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card:nth-of-type(4n) {
+  grid-column: span 2;
+}
+
+.card:nth-of-type(5n) {
+  grid-column: span 2;
+}
+
+.card:nth-of-type(7n) {
+  grid-row: span 2;
+}
 </style>
