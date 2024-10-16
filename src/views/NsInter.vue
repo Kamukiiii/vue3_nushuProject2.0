@@ -46,8 +46,8 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: url(../assets/images/bg.png) no-repeat;
-      background-size:cover;
+      /* background: url(../assets/images/bg.png) no-repeat; */
+      /* background-size:cover; */
       position: relative;
   }
 

@@ -51,10 +51,10 @@
 
 body {
   min-block-size: 100%;
-  display: grid;
+  display: grid; 
   place-content: center;
   /* 设置上下内边距为 30% 视口高度 */
-  padding-block: 30dvh;
+  padding-block: 80px;
   background: #ebeddf;
 }
 
