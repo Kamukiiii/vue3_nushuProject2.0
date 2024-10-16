@@ -11,6 +11,9 @@ import pic7 from '../assets/images/pic7.png';
 import pic8 from '../assets/images/pic8.png';
 import pic9 from '../assets/images/pic9.png';
 import pic10 from '../assets/images/pic10.png';
+import pic11 from '../assets/images/pic11.png';
+import pic12 from '../assets/images/pic12.png';
+import pic13 from '../assets/images/pic13.png';
 const data = ref([
     { src1: src1, src2: pic2},
     { src1: src1, src2: pic3},
@@ -21,11 +24,14 @@ const data = ref([
     { src1: src1, src2: pic8 },
     { src1: src1, src2: pic9 },
     { src1: src1, src2: pic10 },
+    { src1: src1, src2: pic11 },
+    { src1: src1, src2: pic12 },
+    { src1: src1, src2: pic13 },
 ]);
 //获取0-9随机数数组
 const RandomIndices = computed(() => {
     const indices = new Set();
-    while (indices.size < 9) {
+    while (indices.size < 12) {
         indices.add(Math.floor(Math.random() * data.value.length));
     }
     return Array.from(indices);

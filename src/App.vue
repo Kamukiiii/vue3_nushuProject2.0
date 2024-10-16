@@ -9,6 +9,7 @@
         <a><RouterLink to="/knowledge" active-class="active">科普</RouterLink></a>
         <a><RouterLink to="/interact" active-class="active">交互</RouterLink></a>
         <a><RouterLink to="/game" active-class="active">游戏</RouterLink></a>
+        <a href="https://nushuscript.org/unicode/" target="_blank">更多</a>
     </div>
   <RouterView />
   </div>
@@ -25,7 +26,7 @@
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    background: rgb(151, 230, 206);
+    background: #b3bda9;
     height: 500px;
     border-radius: 10px;
     transition: all 0.5s;
@@ -35,12 +36,12 @@
     a{
       text-decoration: none;
       padding-top: 20px;
-      color: rgb(220, 185, 138);
+      color: #756c4b;
     }
     .active{
-      color: blue;
+      color: #eae4d1;
       text-decoration: inline;
-      border-bottom: 2px solid red;
+      border-bottom: 2px solid #75674b;
     }
   }
 </style>
