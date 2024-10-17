@@ -13,7 +13,7 @@ const router = createRouter({
    {path:'/interact',component:NsInter},
    {path:'/knowledge',component:NsKnowledge},
    {path:'/game',component:TurnCard},
-   {path: '/gpt', component: PageAi },
+   {path: '/gpt', component: PageAi }, 
   ]
 })
 

@@ -1,5 +1,5 @@
 <script setup>
-  import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -12,7 +12,7 @@
         <RouterLink to="/knowledge" active-class="active">科普</RouterLink>
       </a>
       <a>
-        <RouterLink to="/interact" active-class="active">交互</RouterLink>
+        <RouterLink to="/interact" active-class="active">趣学</RouterLink>
       </a>
       <a>
         <RouterLink to="/game" active-class="active">游戏</RouterLink>
