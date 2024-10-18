@@ -1,5 +1,19 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+(function (d, t) {
+  var BASE_URL = "https://app.chatwoot.com";
+  var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  g.src = BASE_URL + "/packs/js/sdk.js";
+  g.defer = true;
+  g.async = true;
+  s.parentNode.insertBefore(g, s);
+  g.onload = function () {
+    window.chatwootSDK.run({
+      websiteToken: 'ghrC6HLiZQrNRiZxh9ix4xQn',
+      baseUrl: BASE_URL
+    })
+  }
+})(document, "script");
 </script>
 
 <template>
@@ -27,32 +41,35 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped lang="less">
-  .nav{
-    padding: 20px;
-    position: absolute;
-     z-index: 999;
-    position: fixed;
-    left: -70px;
-    top: 20%;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    background: #b3bda9;
-    height: 500px;
-    border-radius: 10px;
-    transition: all 0.5s;
-    &:hover{
-      transform: translateX(70px);
-    }
-    a{
-      text-decoration: none;
-      padding-top: 20px;
-      color: #756c4b;
-    }
-    .active{
-      color: #eae4d1;
-      text-decoration: inline;
-      border-bottom: 2px solid #75674b;
-    }
+.nav {
+  padding: 20px;
+  position: absolute;
+  z-index: 999;
+  position: fixed;
+  left: -70px;
+  top: 20%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  background: #b3bda9;
+  height: 500px;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: translateX(70px);
   }
+
+  a {
+    text-decoration: none;
+    padding-top: 20px;
+    color: #756c4b;
+  }
+
+  .active {
+    color: #eae4d1;
+    text-decoration: inline;
+    border-bottom: 2px solid #75674b;
+  }
+}
 </style>
