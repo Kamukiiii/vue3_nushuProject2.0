@@ -7,7 +7,13 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
+<<<<<<< HEAD
     "lint": "eslint . --fix"
+=======
+    "lint": "eslint . --fix",
+    "nmp-install": "npm install",
+    "pnmp-install": "pnpm install"
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

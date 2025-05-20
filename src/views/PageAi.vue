@@ -4,6 +4,7 @@
             <p>女书新语</p>
         </div>
         <div class="receive">
+<<<<<<< HEAD
             <div class="msg-box">
                 <div class="ai-bubble" v-for="(msg, index) in bubbleMessages" :key="index">
                     {{ msg }}
@@ -13,6 +14,13 @@
         <div class="send">
             <input type="text" id="question" placeholder="输入你想问的问题" v-model="inputVal"><button :disabled="false"
                 @click="sendMsg" id="btn" @keyup.enter="sendMsg">发送</button>
+=======
+            <textarea id="result" v-model="sparkResult" readonly></textarea>
+        </div>
+        <div class="send">
+            <input type="text" id="question" placeholder="输入你想问的问题" v-model="inputVal"><button :disabled="false"
+                @click="sendMsg" id="btn">发送</button>
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
         </div>
     </div>
 </template>
@@ -20,7 +28,11 @@
 <script setup>
 import * as base64 from "base-64"
 import CryptoJs from "crypto-js"
+<<<<<<< HEAD
 import { ref, nextTick } from "vue";
+=======
+import { ref } from "vue";
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
 
 
 // let btnDisable = 'false'
@@ -34,7 +46,11 @@ const requestObj = {
 }
 let sparkResult = ref('') // 这里放你获取到的结果
 const inputVal = ref('')
+<<<<<<< HEAD
 const bubbleMessages = ref([]) // 用于渲染气泡的数组
+=======
+
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
 // 鉴权url地址
 const getWebsocketUrl = () => {
     return new Promise((resovle) => {
@@ -128,24 +144,32 @@ const sendMsg = async () => {
         addMsgToTextarea(sparkResult.value)
         // btnDisable.value = false
         // 清空输入框
+<<<<<<< HEAD
         inputVal.value = ''
+=======
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
     })
     // socket.addEventListener('error', (event) => { })
 }
 
 // 这就是我们最终获取到的结果，输出在我们的页面上即可
 const addMsgToTextarea = (text) => {
+<<<<<<< HEAD
     bubbleMessages.value = text.split('\n\n').filter(m => m.trim() !== '')
     sparkResult.value = text
     nextTick(() => {
         const container = document.querySelector('.receive')
         container.scrollTop = container.scrollHeight
     })
+=======
+    sparkResult.value = text
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
 }
 </script>
 
 <style lang="less">
 .AIchat {
+<<<<<<< HEAD
     width: 800px;
     margin: 40px auto;
     border-radius: 12px;
@@ -242,8 +266,67 @@ const addMsgToTextarea = (text) => {
                 background-color: #b5b5b5;
                 cursor: not-allowed;
             }
+=======
+    width: 1000px;
+    // height: 700px;
+    // background-color: skyblue;
+    padding: 5px;
+
+    .title {
+        padding: 15px;
+        border-bottom: 1px solid #615f5f;
+
+        p {
+            font-size: 20px;
+            color: #7d7979;
+        }
+    }
+
+    .receive {
+        width: 100%;
+        height: 600px;
+        padding-top: 15px;
+        #result {
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none;
+            outline: none;
+            background-color: #a8b092;
+            opacity: 0.6;
+            font-size: 20px;
+            padding: 10px;
+            color: #393425;
+            // border-radius: 10px;
+        }
+    }
+
+    .send {
+        width: 100%;
+        border-top: 2px solid #d1d1d1;
+
+        #question {
+            border: none;
+            width: 935px;
+            height: 50px;
+            padding: 5px;
+
+        }
+
+        button {
+            width: 55px;
+            height: 50px;
+            background-color: #79836c;
+            opacity: 0.5;
+            border: none;
+            // border-radius: 10px;
+            cursor: pointer;
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
         }
     }
 }
 </style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a

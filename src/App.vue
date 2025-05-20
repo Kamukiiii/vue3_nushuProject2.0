@@ -34,9 +34,12 @@ import { RouterLink } from 'vue-router'
       <a>
         <RouterLink to="/gpt" active-class="active">大模型</RouterLink>
       </a>
+<<<<<<< HEAD
       <a>
         <RouterLink to="/recognition" active-class="active">文字识别</RouterLink>
       </a>
+=======
+>>>>>>> a7ed6c020719dbd612ce112f3648783d9fe1cc7a
       <a href="https://nushuscript.org/unicode/" target="_blank">更多</a>
     </div>
     <RouterView />
